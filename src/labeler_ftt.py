@@ -2,7 +2,7 @@ import os
 from dateutil import parser
 import supervisely_lib as sly
 from supervisely_lib.labeling_jobs.utils import total_items_count, labeled_items_count, reviewed_items_count, \
-    accepted_items_count, rejected_items_count, get_job_url
+    accepted_items_count, rejected_items_count, get_job_url, is_on_review
 
 
 
@@ -44,10 +44,11 @@ def preprocessing(api: sly.Api, task_id, context, state, app_logger):
         data_row.append(reviewed_items_count(job))
         data_row.append(accepted_items_count(job))
         data_row.append(rejected_items_count(job))
-        if accepted_items_count(job) == 0 or labeled_items_count(job) == 0:
+        if accepted_items_count(job) == 0:
             data_row.append(0)
         else:
-            data_row.append(accepted_items_count(job) / labeled_items_count(job))
+            #data_row.append(round(accepted_items_count(job) * 100 / labeled_items_count(job), 2))
+            data_row.append(round(accepted_items_count(job) * 100 / total_items_count(job), 2))
         data.append(data_row)
 
     jobs_table = {
