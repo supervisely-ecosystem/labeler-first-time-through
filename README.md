@@ -20,7 +20,7 @@
 </div>
 
 ## Overview
-First Time True (FTT) metric (in percentage) shows how many items labeler annotated right the first time (i.e. reviewer accepted his work on first round).
+First Time True (FTT) metric (in percentage) shows how many items labeler annotated right the first time (i.e. reviewer accepted his work on first round). This metric helps to find accurate labelers (i.e. reviewers accepts many of their annotations).
 
 `FTT (%) = ACCEPTED * 100 / LABELED`
 
