@@ -32,6 +32,7 @@ Log in to the team, then go to `Ecosystem`->`Apps` page. Find app and press `Get
 
 ## Step 2. Open context menu of team member
 
+<img src="https://i.imgur.com/Ajmoxes.png"/>
 
 ## History of runs
 
