@@ -37,7 +37,7 @@ Log in to the team, then go to `Ecosystem`->`Apps` page. Find app and press `Get
 
 <img src="https://i.imgur.com/Ajmoxes.png"/>
 
-## Step 3. wait util report is created. App shuts down automatically
+## Step 3. Wait util report is created. App shuts down automatically
 
 Done!
 
