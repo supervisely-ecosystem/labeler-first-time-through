@@ -21,6 +21,8 @@
 
 ## Overview
 
+TODO: non rejeced case
+
 First Time True (FTT) metric (in percentage) shows how many items labeler annotated right the first time (i.e. reviewer accepted his work on first round).
 
 Application shows the table of all labeling jobs in the team that were assigned to specific member and calculates FTT metric for every job (last column). Also it produces average FTT for all non-zero values.
