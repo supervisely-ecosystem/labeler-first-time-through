@@ -15,5 +15,9 @@
   "task_location": "application_sessions",
   "isolate": true,
   "icon": "https://img.icons8.com/fluent/96/000000/purposeful-man.png",
-  "icon_background": "#FFFFFF"
+  "icon_background": "#FFFFFF",
+  "context_menu": {
+    "target": ["member"],
+    "context_root": "Report"
+  }
 }
