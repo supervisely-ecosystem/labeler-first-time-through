@@ -21,7 +21,9 @@
 
 ## Overview
 
-First Time True metric (in percentage) shows how many items labeler annotated right the first time (i.e. reviewer accepted his work on first round).
+First Time True (FTT) metric (in percentage) shows how many items labeler annotated right the first time (i.e. reviewer accepted his work on first round).
+
+Application shows the table of all labeling jobs in the team that were assigned to specific member and calculates FTT metric for every job (last column). 
 
 <img src="https://i.imgur.com/E7hO6O2.png"/>
 
