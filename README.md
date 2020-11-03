@@ -20,10 +20,9 @@
 </div>
 
 ## Overview
-
-TODO: non rejeced case
-
 First Time True (FTT) metric (in percentage) shows how many items labeler annotated right the first time (i.e. reviewer accepted his work on first round).
+
+`FTT (%) = ACCEPTED * 100 / LABELED`
 
 Application shows the table of all labeling jobs in the team that were assigned to specific member and calculates FTT metric for every job (last column). Also it produces average FTT for all non-zero values.
 
@@ -41,6 +40,10 @@ Log in to the team, then go to `Ecosystem`->`Apps` page. Find app and press `Get
 ## Step 3. wait util report is created. App shuts down automatically
 
 Done!
+
+## Special case
+Apps calculates FTT metric 
+
 
 ## History of runs
 
