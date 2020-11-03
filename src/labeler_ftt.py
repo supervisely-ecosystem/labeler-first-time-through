@@ -9,8 +9,8 @@ from supervisely_lib.labeling_jobs.utils import total_items_count, labeled_items
 my_app = sly.AppService()
 
 TEAM_ID = int(os.environ['context.teamId'])
-USER_ID = int(os.environ['modal.state.slyUserId'])
-
+USER_ID = int(os.environ['modal.state.slyMemberId'])
+non_zero_ftt = []
 
 @my_app.callback("preprocessing")
 @sly.timeit
@@ -29,7 +29,7 @@ def preprocessing(api: sly.Api, task_id, context, state, app_logger):
 
     stats = [api.labeling_job.get_stats(job.id) for job in jobs]
 
-    columns = ['ID', 'NAME', 'STATUS', 'CREATED_AT', 'ASSIGNED TO', 'TOTAL', 'LABELED', 'REVIEWED', 'ACCEPTED', 'REJECTED', 'FTT']
+    columns = ['ID', 'NAME', 'STATUS', 'CREATED_AT', 'ASSIGNED TO', 'TOTAL', 'LABELED', 'REVIEWED', 'ACCEPTED', 'REJECTED', 'FTT (%)']
     data = []
     for job, stat in zip(jobs, stats):
         data_row = []
@@ -44,23 +44,37 @@ def preprocessing(api: sly.Api, task_id, context, state, app_logger):
         data_row.append(reviewed_items_count(job))
         data_row.append(accepted_items_count(job))
         data_row.append(rejected_items_count(job))
+        ftt = 0
         if accepted_items_count(job) == 0:
-            data_row.append(0)
+            ftt = 0
         else:
-            #data_row.append(round(accepted_items_count(job) * 100 / labeled_items_count(job), 2))
-            data_row.append(round(accepted_items_count(job) * 100 / total_items_count(job), 2))
+            ftt = round(accepted_items_count(job) * 100 / labeled_items_count(job), 2)
+            non_zero_ftt.append(ftt)
+        data_row.append(ftt)
         data.append(data_row)
 
     jobs_table = {
         "columns": columns,
         "data": data
     }
+    avg_ftt = 0
+    if len(non_zero_ftt) > 0:
+        avg_ftt = round(sum(non_zero_ftt) / len(non_zero_ftt), 2)
+
+    fields = [
+        {"field": "data.jobsTable", "payload": jobs_table},
+        {"field": "data.memberLogin", "payload": user.login},
+        {"field": "data.avgFtt", "payload": "{}%".format(avg_ftt)},
+    ]
+    api.task.set_fields(task_id, fields)
+
     api.task.set_field(task_id, "data.jobsTable", jobs_table)
     my_app.stop()
 
 def main():
     data = {
         "jobsTable": {"columns": [], "data": []},
+        "avgFtt": "in progress"
     }
     initial_events = [{"state": None, "context": None, "command": "preprocessing"}]
 
