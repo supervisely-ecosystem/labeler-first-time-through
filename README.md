@@ -21,12 +21,17 @@
 
 ## Overview
 
-Report
+First Time True metric (in percentage) shows how many items labeler annotated right the first time (i.e. reviewer accepted his work on first round).
 
 <img src="https://i.imgur.com/E7hO6O2.png"/>
 
-# labeler-first-time-true
-First Time True metric (in percentage) shows how many items labeler annotated right the first time (i.e. reviewer accepted his work on first round).
+# How to Run
+
+## Step 1. (Optional) Add app to your team from Ecosystem
+Log in to the team, then go to `Ecosystem`->`Apps` page. Find app and press `Get` button. Now app is added to your team.
+
+## Step 2. Open context menu of team member
+
 
 ## History of runs
 
