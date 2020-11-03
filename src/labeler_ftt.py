@@ -44,12 +44,18 @@ def preprocessing(api: sly.Api, task_id, context, state, app_logger):
         data_row.append(reviewed_items_count(job))
         data_row.append(accepted_items_count(job))
         data_row.append(rejected_items_count(job))
+
+        # print for debug
+        #print(job.name)
+        #print(job.status)
+        #print(accepted_items_count(job), "/", labeled_items_count(job))
         ftt = 0
-        if accepted_items_count(job) == 0 or labeled_items_count(job):
+        if accepted_items_count(job) == 0 or labeled_items_count(job) == 0:
             ftt = 0
         else:
             ftt = round(accepted_items_count(job) * 100 / labeled_items_count(job), 2)
             non_zero_ftt.append(ftt)
+        #print(ftt)
         data_row.append(ftt)
         data.append(data_row)
 
