@@ -42,7 +42,14 @@ Log in to the team, then go to `Ecosystem`->`Apps` page. Find app and press `Get
 Done!
 
 ## Special case
-Apps calculates FTT metric 
+
+<img src="https://i.imgur.com/Vha8y0z.png"/>
+
+Apps calculates FTT metric for all jobs. If job has rejected images, these images can be separated to another new labeling job by clicking `Restart rejected` button. And then labeler will correct his mistakes. 
+
+The problem here is that supervisely do not track such new jobs and `AVG FTT` metric will be slightly incorrect. In best case such new jobs (`Restart rejected`) have to be ignored. 
+
+Now Application provides FTT for every job. And it helps to get main idea how labeler performs. To distinguish jobs (created with `Restart rejected` button) from the original ones we recommend the following workaround: to name labeling jobs with suffix `round-XX` (for example `labeling job #01 round-01`, `labeling job #01 round-02`, etc...). But in the future versions of the app it will be fixed and the metric will be completele correct.  
 
 
 ## History of runs
