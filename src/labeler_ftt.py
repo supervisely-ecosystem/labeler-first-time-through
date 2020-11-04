@@ -37,7 +37,7 @@ def preprocessing(api: sly.Api, task_id, context, state, app_logger):
         data_row.append('<a href="{0}" rel="noopener noreferrer" target="_blank">{1}</a>'
                         .format(get_job_url(api.server_address, job), job.name))
         data_row.append(job.status)
-        data_row.append(parser.parse(job.created_at).strftime('%Y/%m/%d/ %H:%M'))
+        data_row.append(parser.parse(job.created_at).strftime('%Y/%m/%d %H:%M'))
         data_row.append(job.assigned_to_login)
         data_row.append(total_items_count(job))
         data_row.append(labeled_items_count(job))
