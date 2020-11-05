@@ -49,7 +49,7 @@ Apps calculates FTT metric for all jobs. If job has rejected images, these image
 
 The problem here is that supervisely do not track such new jobs and `AVG FTT` metric will be slightly incorrect. In best case such new jobs (`Restart rejected`) have to be ignored. 
 
-Now Application provides FTT for every job. And it helps to get main idea how labeler performs. To distinguish jobs (created with `Restart rejected` button) from the original ones we recommend the following workaround: to name labeling jobs with suffix `round-XX` (for example `labeling job #01 round-01`, `labeling job #01 round-02`, etc...). But in the future versions of the app it will be fixed and the metric will be completele correct.  
+Now Application provides FTT for every job. And it helps to get main idea how labeler performs. To distinguish jobs (created with `Restart rejected` button) from the original ones we recommend the following workaround: to name labeling jobs with suffix `round-XX` (for example `labeling job #01 round-01`, `labeling job #01 round-02`, etc...). But in the future versions of the app it will be fixed and the metric will be completely correct.  
 
 
 ## History of runs
