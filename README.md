@@ -2,7 +2,7 @@
 
 <img src="https://i.imgur.com/Q5Ht1Td.png"/>
 
-# Labeling Jobs Stats
+# First Time True (FTT) metric for labeler
 
 <p align="center">
 
