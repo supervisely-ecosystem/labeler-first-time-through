@@ -14,7 +14,7 @@
         </el-col>
     </el-row>
     <sly-card class="mt15" title="Labeling jobs"
-              subtitle="All jobs assigned to selected user. First Time True (FTT) = ACCEPTED / LABELED">
+              subtitle="All jobs assigned to selected user. First Time Through (FTT) = ACCEPTED / LABELED">
         <sly-table :options="{perPage: 40, pageSizes: [15, 30, 40, 100]}" :content="data.jobsTable"></sly-table>
         <div class="mt15" style="color: blue"> Avg FTT (for non-zero values): {{data.avgFtt}}</div>
     </sly-card>
