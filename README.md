@@ -35,7 +35,7 @@ Log in to the team, then go to `Ecosystem`->`Apps` page. Find app and press `Get
 
 ## Step 2. Open context menu of team member
 
-<img src="https://i.imgur.com/Ajmoxes.png"/>
+<img src="https://i.imgur.com/7UXftxr.png"/>
 
 ## Step 3. Wait util report is created. App shuts down automatically
 
