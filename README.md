@@ -1,8 +1,8 @@
 <div align="center" markdown>
 
-<img src="https://i.imgur.com/Q5Ht1Td.png"/>
+<img src="https://i.imgur.com/yH5I7au.png"/>
 
-# First Time True (FTT) metric for labeler
+# First Time Through (FTT) metric for labeler
 
 <p align="center">
 
@@ -20,7 +20,7 @@
 </div>
 
 ## Overview
-First Time True (FTT) metric (in percentage) shows how many items labeler annotated right the first time (i.e. reviewer accepted his work on first round). This metric helps to find accurate labelers (i.e. reviewers accepts many of their annotations).
+First Time Through (FTT) metric (in percentage) shows how many items labeler annotated right the first time (i.e. reviewer accepted his work on first round). This metric helps to find accurate labelers (i.e. reviewers accepts many of their annotations).
 
 `FTT (%) = ACCEPTED * 100 / LABELED`
 
