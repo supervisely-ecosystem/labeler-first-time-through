@@ -26,7 +26,7 @@ First Time Through (FTT) metric (in percentage) shows how many items labeler ann
 
 Application shows the table of all labeling jobs in the team that were assigned to specific member and calculates FTT metric for every job (last column). Also it produces average FTT for all non-zero values.
 
-<img src="https://i.imgur.com/E7hO6O2.png"/>
+<img src="https://i.imgur.com/mkbxGDX.png"/>
 
 # How to Run
 
