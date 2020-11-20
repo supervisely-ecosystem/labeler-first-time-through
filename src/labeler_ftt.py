@@ -5,18 +5,19 @@ from supervisely_lib.labeling_jobs.utils import total_items_count, labeled_items
     accepted_items_count, rejected_items_count, get_job_url, is_on_review
 
 
-
 my_app = sly.AppService()
 
 TEAM_ID = int(os.environ['context.teamId'])
 USER_ID = int(os.environ['modal.state.slyMemberId'])
 non_zero_ftt = []
 
+
 @my_app.callback("preprocessing")
 @sly.timeit
 def preprocessing(api: sly.Api, task_id, context, state, app_logger):
     team = api.team.get_info_by_id(TEAM_ID)
-    user = api.user.get_info_by_id(USER_ID)
+    #user = api.user.get_info_by_id(USER_ID)
+    user = api.user.get_member_info_by_id(TEAM_ID, USER_ID)
     all_jobs = api.labeling_job.get_list(team.id)
 
     jobs = []
@@ -78,6 +79,7 @@ def preprocessing(api: sly.Api, task_id, context, state, app_logger):
 
     api.task.set_field(task_id, "data.jobsTable", jobs_table)
     my_app.stop()
+
 
 def main():
     sly.logger.info("Input params", extra={"teamId": TEAM_ID, "slyMemberId": USER_ID})
