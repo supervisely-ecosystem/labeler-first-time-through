@@ -37,6 +37,9 @@ Log in to the team, then go to `Ecosystem`->`Apps` page. Find app and press `Get
 
 <img src="https://i.imgur.com/7UXftxr.png"/>
 
+Enable checkbox if you want to use also archived (disabled) jobs. 
+<img src="https://i.imgur.com/7p5MjwJ.png" width="400px"/>
+
 ## Step 3. Wait util report is created. App shuts down automatically
 
 Done!
