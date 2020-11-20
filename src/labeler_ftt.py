@@ -1,5 +1,7 @@
 import os
 from dateutil import parser
+from distutils.util import strtobool
+
 import supervisely_lib as sly
 from supervisely_lib.labeling_jobs.utils import total_items_count, labeled_items_count, reviewed_items_count, \
     accepted_items_count, rejected_items_count, get_job_url, is_on_review
@@ -9,7 +11,7 @@ my_app = sly.AppService()
 
 TEAM_ID = int(os.environ['context.teamId'])
 USER_ID = int(os.environ['modal.state.slyMemberId'])
-USE_ARCHIVED = int(os.environ.get('modal.state.useArchived', False))
+USE_ARCHIVED = bool(strtobool(os.environ.get('modal.state.useArchived', "false")))
 
 non_zero_ftt = []
 
