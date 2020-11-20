@@ -9,6 +9,8 @@ my_app = sly.AppService()
 
 TEAM_ID = int(os.environ['context.teamId'])
 USER_ID = int(os.environ['modal.state.slyMemberId'])
+USE_ARCHIVED = int(os.environ.get('modal.state.useArchived', False))
+
 non_zero_ftt = []
 
 
@@ -18,7 +20,7 @@ def preprocessing(api: sly.Api, task_id, context, state, app_logger):
     team = api.team.get_info_by_id(TEAM_ID)
     #user = api.user.get_info_by_id(USER_ID)
     user = api.user.get_member_info_by_id(TEAM_ID, USER_ID)
-    all_jobs = api.labeling_job.get_list(team.id)
+    all_jobs = api.labeling_job.get_list(team.id, show_disabled=USE_ARCHIVED)
 
     jobs = []
     for job in all_jobs:
@@ -82,10 +84,10 @@ def preprocessing(api: sly.Api, task_id, context, state, app_logger):
 
 
 def main():
-    sly.logger.info("Input params", extra={"teamId": TEAM_ID, "slyMemberId": USER_ID})
+    sly.logger.info("Input params", extra={"teamId": TEAM_ID, "slyMemberId": USER_ID,  "useArchived": USE_ARCHIVED})
     data = {
         "jobsTable": {"columns": [], "data": []},
-        "avgFtt": "in progress"
+        "avgFtt": "in progress",
     }
     initial_events = [{"state": None, "context": None, "command": "preprocessing"}]
 
