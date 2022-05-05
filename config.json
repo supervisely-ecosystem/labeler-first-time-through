@@ -17,7 +17,10 @@
   "icon": "https://img.icons8.com/fluent/96/000000/purposeful-man.png",
   "icon_background": "#FFFFFF",
   "context_menu": {
-    "target": ["team_member"],
+    "target": [
+      "team_member"
+    ],
     "context_root": "Report"
-  }
+  },
+  "poster": "https://i.imgur.com/yH5I7au.png"
 }
