@@ -1,6 +1,6 @@
 <div align="center" markdown>
 
-<img src="https://user-images.githubusercontent.com/48245050/182393967-9d24a8f4-524c-4c4c-9fe7-0308174a465a.png"/>
+<img src="https://user-images.githubusercontent.com/106374579/187230447-a62c5dc2-4f03-40a8-863b-e825799960c2.png"/>
 
 # First Time Through (FTT) metric for labeler
 
