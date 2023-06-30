@@ -25,7 +25,7 @@ First Time Through (FTT) metric (in percentage) shows how many items labeler ann
 
 Application shows the table of all labeling jobs in the team that were assigned to specific member and calculates FTT metric for every job (last column). Also it produces average FTT for all non-zero values.
 
-<img src="https://i.imgur.com/mkbxGDX.png"/>
+<img src="media/ov.png"/>
 
 # How to Run
 
@@ -34,10 +34,10 @@ Log in to the team, then go to `Ecosystem`->`Apps` page. Find app and press `Get
 
 ## Step 2. Open context menu of team member
 
-<img src="https://i.imgur.com/7UXftxr.png"/>
+<img src="media/htr2.png"/>
 
 Enable checkbox if you want to use also archived (disabled) jobs. 
-<img src="https://i.imgur.com/7p5MjwJ.png" width="400px"/>
+<img src="media/htr2a.png" width="400px"/>
 
 ## Step 3. Wait util report is created. App shuts down automatically
 
@@ -58,4 +58,4 @@ Now Application provides FTT for every job. And it helps to get main idea how la
 
 To see history of runs go to `Apps` page, click to applications sessions. In front of every session you can see buttons (`View` and `Logs`). Press `View` button to open stopped application session in `Read Only` mode.
 
-<img src="https://i.imgur.com/woqPetm.png"/>
+<img src="media/h1.png"/>
