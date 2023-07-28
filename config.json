@@ -1,26 +1,26 @@
 {
-  "name": "Labeler First Time Through",
-  "type": "app",
-  "categories": [
-    "collaboration",
-    "statistics",
-    "visualization stats"
-  ],
-  "description": "First Time Through ratio shows how many items labeler annotated right the first time (i.e. reviewer accepted his work on first round).",
-  "docker_image": "supervisely/base-py-sdk:6.35.0",
-  "main_script": "src/labeler_ftt.py",
-  "modal_template": "src/modal.html",
-  "modal_template_state": {},
-  "gui_template": "src/gui.html",
-  "task_location": "application_sessions",
-  "isolate": true,
-  "icon": "https://img.icons8.com/fluent/96/000000/purposeful-man.png",
-  "icon_background": "#FFFFFF",
-  "context_menu": {
-    "target": [
-      "team_member"
+    "name": "Labeler First Time Through",
+    "type": "app",
+    "categories": [
+        "collaboration",
+        "statistics",
+        "visualization stats"
     ],
-    "context_root": "Report"
-  },
-  "poster": "https://user-images.githubusercontent.com/106374579/187230447-a62c5dc2-4f03-40a8-863b-e825799960c2.png"
+    "description": "First Time Through ratio shows how many items labeler annotated right the first time (i.e. reviewer accepted his work on first round).",
+    "docker_image": "supervisely/collaboration:0.0.1",
+    "main_script": "src/labeler_ftt.py",
+    "modal_template": "src/modal.html",
+    "modal_template_state": {},
+    "gui_template": "src/gui.html",
+    "task_location": "application_sessions",
+    "isolate": true,
+    "icon": "https://img.icons8.com/fluent/96/000000/purposeful-man.png",
+    "icon_background": "#FFFFFF",
+    "context_menu": {
+        "target": [
+            "team_member"
+        ],
+        "context_root": "Report"
+    },
+    "poster": "https://user-images.githubusercontent.com/106374579/187230447-a62c5dc2-4f03-40a8-863b-e825799960c2.png"
 }
