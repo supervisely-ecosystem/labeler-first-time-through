@@ -2,8 +2,8 @@ import os
 from dateutil import parser
 from distutils.util import strtobool
 
-import supervisely_lib as sly
-from supervisely_lib.labeling_jobs.utils import total_items_count, labeled_items_count, reviewed_items_count, \
+import supervisely as sly
+from supervisely.labeling_jobs.utils import total_items_count, labeled_items_count, reviewed_items_count, \
     accepted_items_count, rejected_items_count, get_job_url, is_on_review
 
 
